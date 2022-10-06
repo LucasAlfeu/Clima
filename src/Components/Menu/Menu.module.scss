@@ -1,0 +1,62 @@
+.cabecalho{
+    align-items: center;
+    background-color: #0C96E8;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem;&__texto{
+        font-size: 2rem;
+    }
+    &__container{
+        align-items: center;
+        display: flex;
+    }
+    &__logo{
+        height: 50px;
+        margin-right: 0.5rem;
+        width: 50px;
+    }
+    &__botao{
+        height: 30px;
+        width: 30px;
+    }
+    @media (min-width: 1440px){
+        padding: 0 300px;
+    }
+    @media (min-width: 768px) and (max-width: 1400px){
+        padding: 0 15vw;
+    }
+    @media (min-width: 460px) and (max-width: 768px){
+        padding: 0 10vw;
+    }
+}
+.active{ 
+    height: 60px;
+    overflow-y: auto;
+    transition: 0.6s;
+    visibility: visible;
+    z-index: 1000;
+}
+.inactive{
+    height: 0;
+    overflow-y: hidden;
+    transition: 0.6s;
+    visibility: hidden;
+}
+.lista{
+    align-items: center;
+    background-color: #005EFF;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0.75rem;
+    &__item{
+        color: white;
+        margin: 0 0.75rem;
+    }
+}
+.item{
+    width: 30px;
+    height: 30px;
+}

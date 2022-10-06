@@ -1,0 +1,61 @@
+.base {
+    opacity: 0;
+}
+
+.container {
+    background-image: url(../../assets/nuvem.png);
+    background-repeat: no-repeat;
+    height: 50vh;
+    margin: 0 5vw;
+    text-align: center;
+    width: 90vw;
+
+    @media (min-width: 1440px) {
+        background-size: contain;
+        margin: 3rem 43vw;
+        height: 250px;
+    }
+    @media (min-width: 768px) and (max-width: 1400px) {
+        margin: 2rem 22vw;
+        height: 400px;
+    }
+
+    @media (min-width: 460px) and (max-width: 768px) {
+        background-size: contain;
+        margin: 1rem 35vw;
+        height: 150px;
+    }
+}
+
+.caixa {
+    background-image: none;
+}
+
+.clima {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 2.75rem 0;
+    opacity: 1;
+
+    &__cabecalho {
+        display: flex;
+        font-size: 2.1rem;
+        justify-content: center;
+    }
+
+    &__corpo {
+        align-items: center;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    &__icone {
+        transform: scale(1.2);
+    }
+
+    @media (min-width: 1440px) {
+        margin: 3rem 300px;
+        height: 250px;
+    }
+}

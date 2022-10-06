@@ -1,0 +1,49 @@
+.banner{
+    align-items: flex-end;
+    background: url('https://notisul.com.br/wp-content/uploads/2017/10/sol-e-ceu-azul-devem-predominar-neste-domingo-no-sul-do-estado-1.jpg');
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    text-align: right;
+    &__frase{
+        margin: 1rem 0 0.5rem 6rem;
+        padding: 0 2rem 0.5rem ;
+        @media (min-width: 1440px){
+            margin: 3rem 300px 2rem 6rem;
+        }
+        @media (min-width: 768px) and (max-width: 1400px){
+            margin: 2.5rem 10vw 1.5rem 6rem;
+            width: 450px;
+        }
+        @media (min-width: 460px) and (max-width: 768px){
+            margin: 1.5rem 5vw 1.5rem 6rem;
+        }
+    }
+    &__autor{
+        align-items: flex-end;
+        display: flex;
+        font-size: 1.25rem;
+        margin: 0;
+        padding-right: 2rem;
+        @media (min-width: 1440px){
+            margin: 0 300px 0 0;
+        }
+        @media (min-width: 768px) and (max-width: 1400px){
+            margin: 0 10vw 0 1.5rem;
+        }
+        @media (min-width: 460px) and (max-width: 768px){
+            margin: 0 5vw 0 1.5rem;
+        }
+    }
+    @media (min-width: 1440px){
+        height: 200px;
+    }
+    @media (min-width: 768px) and (max-width: 1400px){
+        height: 200px;
+    }
+    @media (min-width: 460px) and (max-width: 768px){
+        height: 150px;
+    }
+}

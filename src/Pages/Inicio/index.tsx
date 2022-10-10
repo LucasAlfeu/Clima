@@ -14,7 +14,7 @@ export default function Inicio() {
 
     const cidadeTratada = cidade.replace(/[- ]+/g, '-');
 
-    function buscarCidade(e: React.FormEvent<HTMLFormElement>) {
+    function buscarCidade(e: any) {
         e.preventDefault();
         fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cidadeTratada}&limit=5&appid=fa9c5052feb5e2cf2f693bd2a2f28a61`)
             .then(response => response.json())
@@ -28,12 +28,12 @@ export default function Inicio() {
         <div className={styles.caixa}>
             <Menu />
             <Banner />
-            <form className={styles.form} onSubmit={(e) => buscarCidade(e)}>
+            <form className={styles.form} >
                 <label className={styles.form__label}>Insira sua cidade:</label>
 
                 <div className={styles.form__container}>
                     <input className={styles.form__input} type="text" placeholder='Ex: Rio de Janeiro' required onChange={(e) => setCidade(e.target.value)} />
-                    <input type="submit" className={styles.form__botao} />
+                    <button className={styles.form__botao} onClick={(e) => buscarCidade(e)}>Pesquisar</button>
                 </div>
             </form>
             <Clima

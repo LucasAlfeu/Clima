@@ -25,6 +25,11 @@
         margin: 1rem 35vw;
         height: 150px;
     }
+    @media (min-width: 360px) and (max-width: 460px) {
+        background-size: contain;
+        margin: 1rem 35vw;
+        height: 150px;
+    }
 }
 
 .caixa {

@@ -16,7 +16,7 @@ export default function Inicio() {
 
     function buscarCidade(e: any) {
         e.preventDefault();
-        fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cidadeTratada}&limit=5&appid=fa9c5052feb5e2cf2f693bd2a2f28a61`)
+        fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${cidadeTratada}&limit=5&appid=fa9c5052feb5e2cf2f693bd2a2f28a61`)
             .then(response => response.json())
             .then(data => {
                 setLatitude(data[0].lat);

@@ -25,17 +25,17 @@ export default function Clima({ latitude, longitude, autoriza }: ICidade) {
     const [mostra, setMostra] = useState<boolean>(false);
 
     useEffect(() => {
-        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=fa9c5052feb5e2cf2f693bd2a2f28a61`)
-            .then(response => response.json())
-            .then(data => {
-                setNome(data.name);
-                setPais(data.sys.country);
-                setTemperatura((data.main.temp) - 273);
-                setSensacaoTermica(((data.main.feels_like) - 273));
-                setHumidade(data.main.humidity);
-                setNivelMar(data.main.sea_level);
-                setVelocidadeVento(data.wind.speed);
-                setIcon(data.weather[0].icon);
+        axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=fa9c5052feb5e2cf2f693bd2a2f28a61`)
+            .then(response => {
+                setNome((response.data.name));
+                setPais(response.data.sys.country);
+                setTemperatura((response.data.main.temp) - 273);
+                setSensacaoTermica(((response.data.main.feels_like) - 273));
+                setHumidade(response.data.main.humidity);
+                setNivelMar(response.data.main.sea_level);
+                setVelocidadeVento(response.data.wind.speed);
+                setIcon(response.data.weather[0].icon);
+                console.log(response);
                 setMostra(true);
             })
             .catch(() => {                
@@ -44,7 +44,7 @@ export default function Clima({ latitude, longitude, autoriza }: ICidade) {
     }, [autoriza]);
 
     useEffect(() => {
-        axios.get(`http://openweathermap.org/img/wn/${icon}@2x.png`)
+        axios.get(`https://openweathermap.org/img/wn/${icon}@2x.png`)
             .then((data) => {
                 setIcon(String(data.config.url));
             });

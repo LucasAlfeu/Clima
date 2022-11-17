@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+# Clima
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Sobre o Projeto 
 
-## Available Scripts
+[Confira o Projeto](https://clima-eta.vercel.app/)
 
-In the project directory, you can run:
+Estudo de React com TypeScript com foco em requisição API de previsão do tempo e também inicio dos meus estudos sobre rotas usando o react-router-dom.
 
-### `npm start`
+A API utilizada foi [Open Weather API](https://openweathermap.org/api). Inserindo a cidade desejada obtemos a geolocalização e com isso com a resposta da api conseguimos ver a temperatuda em graus Celsius, a sensação temica também em graus Celsius, temperatura fornecia foi em grau Fahrenheit então converti para a convenção que utilizamos no Brasil, a porcentagem da humidade do ar, a altitude, em metros, que se encontra a cidade pesquisada e a velocidade do vento em quilometros por hora.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Na parte das rotas utilizei a biblioteca do [react-router-dom](https://www.npmjs.com/package/react-router-dom) para alternar entra a página inicial e a de algumas informações e curiosidades.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Layout 
 
-### `npm test`
+### Web 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![web](https://github.com/LucasAlfeu/Clima/blob/main/src/assets/Layout/clima.png)
 
-### `npm run build`
+### Mobile
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![mobile](https://github.com/LucasAlfeu/Clima/blob/main/src/assets/Layout/mobile.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Linguagens usadas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Front-End 
 
-### `npm run eject`
+* HTML
+* CSS
+* TypeScript
+* React
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Implementação em Produção
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Front-End: [Vercel](https://vercel.com/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Como executar
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Pré-requisitos: npm/yarn
 
-## Learn More
+```bash
+# clonar repositório
+git clone https://github.com/LucasAlfeu/Clima.git
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# entrar na pasta Clima
+cd Clima
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# instalar as depedências
+npm install
+
+# iniciar o projeto
+npm start
+````
+
+# Autor
+
+Lucas Alfeu da Silva Oliveira
+
+https://www.linkedin.com/in/lucas-alfeu-08b525235/
